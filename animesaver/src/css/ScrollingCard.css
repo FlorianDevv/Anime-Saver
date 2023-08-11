@@ -1,0 +1,110 @@
+.scrolling-card-container {
+  display: flex;
+  overflow-x: scroll;
+  /* scroll-snap-type: x proximity; */
+  scroll-behavior: smooth;
+  padding: 16px;
+}
+  
+  .scrolling-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 16px;
+    scroll-snap-align: center;
+    text-align: center;
+  }
+  
+  .scrolling-card h2 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+    .scrolling-card img {
+      width: 100%;
+      height: 300px; 
+      object-fit: cover;
+      border-radius: 8px;
+      
+    }
+
+    .scrolling-card:hover{
+      transform: scale(1.05);
+      transition: transform 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+  .scrolling-card-container::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+  }
+  
+  .scrolling-card-container::-webkit-scrollbar-thumb {
+    background-color: rgb(27, 46, 91) ;
+    border-radius: 10px;
+  }
+
+  .scrolling-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 16px;
+  scroll-snap-align: center;
+  text-align: center;
+}
+
+.scrolling-card:hover .overlay {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.scrolling-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.scrolling-card .overlay h3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scrolling-card .overlay p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

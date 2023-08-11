@@ -1,0 +1,23 @@
+version: '4.2'
+services:
+  animesaverapi:
+    build: ./animesaverapi
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+  animesaver:
+    build: ./animesaver
+    ports:
+      - "3001:3001"
+    depends_on:
+      - animesaverapi
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mon-mot-de-passe
+      POSTGRES_DB: postgres

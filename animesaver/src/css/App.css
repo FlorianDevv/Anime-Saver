@@ -1,0 +1,56 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: center;
+}
+
+.anime-card-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.anime-card-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 14px;
+}
+.anime-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}
+
+
+.anime-card-content img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .anime-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .anime-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+#profilepicture{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
+}
+
+
