@@ -10,7 +10,9 @@
 ## Description
 
 This project is a web application that allows you to search for anime and add them to your list. You can also add a comment and rate an anime. You can also edit your comment and rating or delete them.
+
 ![Alt text](/Readme/AnimeSaver.gif?raw=true "Demo Gif")
+
 **Possibility to**
 
 - Create account
